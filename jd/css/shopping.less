@@ -1,0 +1,161 @@
+@h40:40px;
+@h30:30px;
+@width:100%;
+.fl(@l:left){
+    float: @l
+}
+.ta(@c:center){
+    text-align: @c;
+}
+
+
+.container_heard{
+    width: @width;
+    height: 40px;
+    background: white;
+    padding-left: 40px;
+    padding-right: 50px;
+    position: relative;
+    a:nth-of-type(1){
+        display: block;
+        top: 10px;
+        position: absolute;
+        left: 10px;
+    }
+    a:nth-of-type(2){
+        display: block;
+        position: absolute;
+        right:10px;
+        top: 10px;
+    }
+    p{
+        width: @width;
+        text-align: center;
+        line-height: 40px;
+    }
+
+}
+.container_nav{
+    width: 100%;
+    height:@h40;
+    background: #332E2C;
+  
+    div:nth-of-type(1){
+        width: 15%;
+        height: 100%;
+        .fl();
+        .ta();
+        line-height: @h40;
+        color: white;
+        
+
+    }
+    div:nth-of-type(2){
+        width: 85%;
+        height: 100%;
+       
+        .fl();
+        .ta();
+       padding-top: 10px;
+       
+      
+        
+        a{
+            width: 23%;
+            display: block;
+            margin-left: 5px;
+            border-radius: 30px;
+            padding-right: 5px;
+            padding-left: 5px;
+            height: 20px;
+            float: left;
+            background: #0a0a0a;
+            color: white;
+        }
+    }
+}
+.scroll_banner{
+    width: 100%;
+    height: 180px;
+    background: #332E2C;
+    border-radius:0 0 50px 50px; 
+    
+}
+.banner_box{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    .banner_content{
+        width: 100%;
+        height: 182px;
+        // background: darkkhaki; 
+        // width: 80%;
+        // margin: 0 auto;
+      
+        a{
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 15px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                display: block;
+        }
+        }
+    }
+   
+}
+.title{
+    width: @width;
+    
+    a{
+        width: @width;
+        display: block;
+        height: 100%;  
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+.scroll_l{
+    width: 100%;
+    height: 100px;
+    // background: salmon;
+    overflow: auto;
+    position: relative;
+    .more{
+        // position: fixed;
+         position: absolute;
+        top: 7px;
+        left: 0;
+        img{
+            width: 1%;
+        }
+    }
+    div{
+        
+        width: 1000%;
+        height: 100%;
+        // background: sandybrown;
+        box-sizing: border-box;
+        // position: absolute;
+        ul{
+            width: 100%;
+            li{
+               
+                width: 80px;
+                height: 80px;
+                // background: skyblue;
+                margin: 10px 0px 10px 10px;
+                float: left;
+                img{
+                    // display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,13 @@
+#heaher h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#heaher p {
+  font-size: 12px;
+}
+#heaher p a {
+  text-decoration: none;
+}
+#heaher p a:hover {
+  border-width: 1px;
+}

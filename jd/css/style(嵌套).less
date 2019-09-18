@@ -1,0 +1,18 @@
+// 嵌套
+// 我们可以在一个选择器中嵌套另一个选择器来实现继承，这样很大程度减少了代码量，并且代码看起来更加的清晰。
+
+#heaher{
+    h1{
+        font-size: 26px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 12px;
+        a{
+            text-decoration: none;
+            &:hover{
+                border-width: 1px;
+            }
+        }
+    }
+}

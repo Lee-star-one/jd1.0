@@ -1,0 +1,14 @@
+// 混合（Mixins）
+// 混合可以将一个定义好的class A轻松的引入到另一个class B中，
+// 从而简单实现class B继承class A中的所有属性。我们还可以带参数地调用，就像使用函数一样。
+
+.bd(@radius:5px){
+    border-radius: @radius;
+}
+
+#header{
+    .bd;
+}
+#footer{
+    .bd(10px)
+}

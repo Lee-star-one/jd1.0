@@ -1,0 +1,1 @@
+window.onload=function(){for(var e=document.querySelector(".main_left"),l=e.querySelectorAll("li"),o=(e.querySelector("ul"),document.querySelector(".main_right"),0);o<l.length;o++)l[o].index=o,l[o].onclick=function(){for(var e=0;e<l.length;e++)l[e].className="";this.className="current",console.log(1)}};

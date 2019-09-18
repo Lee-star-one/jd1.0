@@ -1,0 +1,1 @@
+function fox_tap(t,n){var e=0,o=!1;t.addEventListener("touchstart",function(t){e=Date.now(),o=!1}),t.addEventListener("touchmove",function(t){o=!0}),t.addEventListener("touchend",function(t){1!=o&&(250<Date.now()-e||n(t))})}
