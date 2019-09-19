@@ -1,0 +1,720 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+#box{
+    width:10rem;
+    height:43rem;
+    background:#ccc;
+}
+.headerbox{
+    width:10rem;
+    height:1.3rem;
+    background:#fff;
+    position:relative;
+}
+.header{
+    width: 9.3rem;
+    height: 1.3rem;
+    margin-left:0.4rem;
+    display:flex;
+    justify-content: space-between;
+}
+.header i{
+    color:#74757F;
+    line-height:1.3rem;
+    font-size:30px;
+    height:1.3rem;
+}
+.header>div{
+    height:1.3rem;
+}
+.header span{
+    font-size:18px;
+    color:#333333;
+    line-height:1.3rem
+}
+#contentbox{
+    width:10rem;
+    height:97%;
+    background:#Fff;
+}
+.addressbarbox{
+    width:10rem;
+    height:1.12rem;
+    border-top:0.04rem solid #EFEFEF;
+    border-bottom:0.04rem solid #EFEFEF;
+}
+.addressbar{
+    width:9.7rem;
+    height:100%;
+    margin-left:0.1rem;
+    display:flex;
+    justify-content:space-between;
+}
+.address{
+    width:45%;
+    height:100%;
+    line-height:0.8rem;
+    display:flex;
+    justify-content: space-between;
+}
+.addressimg{
+    margin-left:0.1rem;
+}
+.addresstext{
+    width:100%;
+    height:100%;
+    color:#999999;
+    line-height:1.12rem;
+}
+.btn-edit{
+    width:20%;
+    height:100%;
+    font-size:14px;
+    line-height:1.12rem;
+    text-align:center;
+    display:block;
+}
+.btn-hidebox{
+    width:2.9rem;
+    height:100%;
+    display:none;
+}
+.btn-clear{
+    font-size:14px;
+    line-height:1.12rem;
+    color:#333;
+    font-size:14px;
+    width:1.9rem;
+    height:100%;
+    float:left;
+}
+.btn-clear>i{
+    margin-right:0.05rem;
+}
+.btn-finish{
+    line-height:1.12rem;
+    text-align:center;
+    width:1rem;
+    height:100%;
+    float:right;
+}
+.cl333{
+    color:#333;
+}
+.fs14{
+    font-size:14px;
+}
+.itembox{
+    width:10rem;
+    height:15.9rem;
+}
+.item{
+    width:9.6rem;
+    height:5.3rem;
+    margin-left:0.1rem;
+    padding-left:0.1rem;
+}
+.itemheader{
+    width:100%;
+    height:1.2rem;
+    background:#fff;
+    position:relative;
+}
+.activetag{
+    width:0.6rem;
+    height:0.45rem;
+    background: #f2270c;
+    float:left;
+    margin-top: 0.4rem;
+    text-align: center;
+    border-radius:3px;
+    font-size:10px;
+    color:#fff;
+    line-height:0.45rem;
+    margin-right:0.05rem;
+}
+.shopnamebox{
+    width:8.9rem;
+    height:100%;
+    float:left;
+    display:flex;
+    justify-content:space-between;
+}
+.shopnamenav>img{
+    margin-left:0.15rem;
+    margin-top:0.25rem;
+    float:left
+}
+.shopname,.shopnameone{
+    font-size: 16px;
+    font-weight: 700;
+    color:#333;
+    float:left;
+    margin-top:0.3rem;
+}
+.shopnameone{
+    font-size:14px;
+    line-height:0.6rem;
+    margin-left:0.2rem;
+}
+.noticeone,.noticetwo,.noticethree{
+    font-size:12px;
+    color:#999;
+    margin-top:0.4rem;
+}
+.noticetwo>span{
+    margin-right:0.15rem;
+}
+.noticethree>span{
+   margin-right:0.15rem;
+}
+.itemcontent{
+    width:100%;
+    height:4.1rem;
+    background:#fff;
+}
+.itemcontent-left{
+    width:6%;
+    height:100%;
+    float:left;
+}
+.itemcontent-right{
+    width:93%;
+    height:100%;
+    float:right;
+    display:flex;
+    justify-content:space-between;
+    margin-left:0.05rem;
+}
+.itemimg{
+   width:100px;
+   height:100px;
+   margin-top:0.3rem;
+   box-shadow: 0 0 18px 0 rgba(0,0,0,.05);
+}
+.itemdesc{
+    width:6rem;
+    height:3.09rem;
+    margin-top:0.3rem;
+}
+.itemdesc-title{
+    width:5.75rem;
+    height:1.2rem;
+    font-size:14px;
+    color:#333;
+    padding-right:0.25rem;
+    overflow: hidden;
+}
+.skubox{
+    width:5.7rem;
+    height:0.5rem;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:0.1rem;
+}
+.sku,.service{
+    width:4.08rem;
+    height:100%;
+    background:#F7F7F7;
+    border-radius:0.06rem;
+    margin-left:0.04rem;
+    font-size: 10px;
+    color: #666;
+    line-height:0.5rem;
+}
+.skudesc{
+    margin-left:0.08rem;
+}
+.skudown,.skuright{
+   float:right;
+   margin-right:0.15rem;
+   color:#ccc;
+}
+.service{
+    width:1.38rem;
+}
+.discountbox{
+    width:5.7rem;
+    height:0.5rem;
+    font-size:10px;
+    color:#f2270c;
+    line-height:0.5rem;
+    margin-top:0.1rem;
+}
+.pricegbox{
+   width:5.7rem;
+   height:0.5rem;
+   display:flex;
+   justify-content: space-between;
+   margin-top:0.1rem;
+}
+.priceg{
+    width:3.81rem;
+    height:0.48rem;
+    color:#f2270c;
+    font-size:16px;
+}
+.RMB{
+    font-size:10px;
+}
+.detele{
+    font-size:10px;
+    color:#999;
+    text-decoration:line-through
+}
+.num_wrap{
+    display:flex;
+    justify-content: space-between;
+}
+.minus,.numdesc,.add{
+    width:0.5rem;
+    height:0.5rem;
+    background:#fff;
+    outline:none;
+    border:none;
+    color:#333;
+}
+.numdesc,.add{
+    background:#F7F7F7;
+    text-align:center;
+    color:#333;
+    width:0.6rem;
+    margin-left:0.04rem;
+}
+.add{
+  width:0.5rem;
+}
+.m_action{
+    width:5.7rem;
+    height:0.5rem;
+    font-size:10px;
+    color: #999;
+    line-height:0.5rem;
+    margin-top:0.25rem;
+}
+.m_action>div{
+    float:right;
+}
+.m_action_item:first-child{
+    margin-right:0.02rem;
+}
+.m_action_item:last-child{
+    margin-left:0.02rem;
+}
+/* 推荐 */
+.recommendbox{
+    width:100%;
+    height:55%;
+    background:#F7F7F7;
+}
+.list{
+    background: #f7f7f7;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list li{
+    background: #fff;
+    float: left;
+    width: 50%;
+    height:35%;
+    margin-bottom: 0.1rem;
+    padding: 15px 15px 0;
+    box-sizing: border-box;
+}
+.cover{
+    width:4.19rem;
+    height:4.19rem;
+}
+.info{
+    width:100%;
+    height:30%;
+    font-size: 12px;
+    color: #333;
+    margin-top:0.35rem;
+}
+.flex_wrap{
+    width:4.19rem;
+    height:0.64rem;
+    margin-top:0.2rem;
+    display:flex;
+}
+.priceinfo{
+    width:80%;
+    height:100%;
+    color:#f2270c;
+    font-size:16px;
+}
+.priceboxt>p{
+    float:left;
+}
+.RMB2{
+    font-size:12px;
+}
+.new{
+   border:0.01rem solid #f2270c;
+   font-size:10px;
+   float:left;
+   margin-top:0.08rem;
+   margin-left:0.18rem;
+   border-radius: 2px;
+   width:0.7rem;
+   text-align:center;
+   line-height:0.4rem;
+}
+.ziying{
+   border:0.01rem solid #f2270c;
+   font-size:10px;
+   background:#f2270c;
+   border-radius: 2px;
+   width:0.7rem;
+   text-align:center;
+   color:#fff;
+   float:left
+}
+.buycart{
+    width:20%;
+    color:#f2270c;
+    text-align:center;
+    line-height:0.5rem;
+}
+#bottom{
+    background: hsla(0,0%,100%,0.95);
+    color: #333;
+    font-size:14px;
+    width:100%;
+    height:7.9%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.btn-all{
+    width:10%;
+    height:100%;
+    text-align:center;
+    color:#999;
+    float:left;
+}
+.btn-all>p{
+    font-size:10px;
+}
+.selectall{
+    width:0.58rem;
+    height:0.58rem;
+    border-radius:0.58rem;
+    outline:none;
+    background:#fff;
+    border:0.04rem #CDCDCD solid;
+    color:#fff;
+    margin-top:0.25rem;
+    margin-bottom:0.05rem;
+}
+.totalbox{
+    width:62%;
+    height:100%;
+    float:left;
+    margin-left:2.8rem;
+    display:flex;
+    justify-content:space-between;
+}
+.total{
+    width:53%;
+    height:100%;
+    /* text-align:center; */
+}
+.buydisabled{
+    width:45%;
+    height:100%;
+    background:#D7D7D7;
+    color:#FFF;
+    font-size:16px;
+    text-align:center;
+    line-height:1.35rem;
+    font-weight:700;
+}
+#totalnumbox{
+    font-size:12px;
+    font-weight:400;
+}
+.t_main{
+    font-weight: 700;
+    font-size: 16px;
+    color:#333;
+    line-height:1.35rem;
+}
+
+.totalpricebox{
+    color:#f2270c;
+    display:inline-block;
+    width:1.7rem;
+}
+.red{
+    background:#f2270c;
+}
+/* 回到顶部 */
+.backtop{
+    width:1.1rem;
+    height:1.1rem;
+    border-radius: 3px 0 0 3px;
+    background-color: rgba(0,0,0);
+    position:fixed;
+    right:0;
+    bottom:3.2rem;
+    overflow:hidden;
+    opacity:0.9;
+    display:none;
+}
+/* 固定定位效果 */
+.fixactive{
+    position:fixed;
+    top:0;
+    left:0;
+}
+/* 选择效果 */
+.checkboxone{
+    position: relative;
+    height: 0.7rem;
+    width:0.7rem;
+    margin-top:0.3rem;
+    float:left;
+}
+.checkboxone input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    top:0;
+    width:0.7rem;
+    height:0.7rem;
+    opacity: 0;
+}
+.checkboxone label {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+}
+.checkboxone label:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxone label:after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxone input[type='checkbox']:checked + label:before {
+    background: #f2270c;
+    border-color:#f2270c;
+}
+.checkboxone input[type='checkbox']:checked + label:after {
+    background: #f2270c;
+}
+
+/* 商品前面的按钮小圆 */
+.checkboxtwo{
+    position: relative;
+    height: 0.58rem;
+    width:0.58rem;
+    margin-top:0.4rem;
+    float:left;
+}
+.checkboxtwo input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    top:0;
+    width:0.58rem;
+    height:0.58rem;
+    opacity: 0;
+}
+.checkboxtwo label {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+}
+.checkboxtwo label:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxtwo label:after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxtwo input[type='checkbox']:checked + label:before {
+    background: #f2270c;
+    border-color:#f2270c;
+}
+.checkboxtwo input[type='checkbox']:checked + label:after {
+    background: #f2270c;
+}
+
+/* 全选 */
+.checkboxthree{
+    position: relative;
+    height: 0.58rem;
+    width:0.58rem;
+    margin-top:0.2rem;
+    margin-left:0.2rem;
+    float:left;
+}
+.checkboxthree input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    top:0;
+    width:0.58rem;
+    height:0.58rem;
+    opacity: 0;
+}
+.checkboxthree label {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+}
+.checkboxthree label:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxthree label:after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.checkboxthree input[type='checkbox']:checked + label:before {
+    background: #f2270c;
+    border-color:#f2270c;
+}
+.checkboxthree input[type='checkbox']:checked + label:after {
+    background: #f2270c;
+}
+/* 隐藏的二级菜单 */
+.hiddenshenglue{
+    background-color: rgba(0,0,0,.9);
+    border-radius: 4px;
+    width:3.4rem;
+    height:6.2rem;
+    position: absolute;
+    right:10px;
+    top: 53px;
+    z-index:10;
+    /* overflow:hidden; */
+    display:none;
+}
+.hiddenshenglue:before{
+    position: absolute;
+    top: -5px;
+    right: 7px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: transparent transparent rgba(0,0,0,.9);
+    border-style: solid;
+    border-width: 0 5px 5px;
+}
+.h-s-list{
+    width:100%;
+    height:1.2rem;
+}
+.h-s-list-l{
+    float:left;
+    width:38%;
+    height:100%;
+}
+.h-s-list-r{
+    float:left;
+    width:62%;
+    height:100%;
+    text-align: left;
+    line-height:1.1rem;
+    border-bottom:0.05rem solid  hsla(0,0%,100%,.2);
+    color:#fff;
+    font-size:14px;
+}
+/* 单件总价 */
+.danjianzongjia{
+    font-size:12px;
+    color:#333;
+}

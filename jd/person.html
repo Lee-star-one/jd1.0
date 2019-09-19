@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+     <script>
+      document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+     </script>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    #box{
+        width:10rem;
+        height: 35rem;
+    }
+    #top{
+        width:10rem;
+        height: 1.3rem;
+    }
+    #top-top{
+            width: 9.3rem;
+            height: 1.3rem;
+            margin-left:0.4rem;
+            display:flex;
+            justify-content: space-between;
+        }
+    #top-top span{
+            font-size:18px;
+            color:#333333;
+            line-height:1.3rem;
+    }
+    #top-top i{
+            color:#74757F;
+            line-height:1.3rem;
+            font-size:30px
+        }
+    /* #top-top img{
+        line-height:1.3rem;
+         width:1.3rem;
+    } */
+    #header{
+        width: 10rem;
+        height:4rem;
+        background:linear-gradient(90deg, #eb3c3c, #ff7459);
+        border-radius:0 0 300px 300px / 0 0 20px 20px;
+        box-shadow: 0 2px 4px rgba(228, 57, 60, 0.4);
+    }
+    #hearer-top{
+        width: 10rem;
+        height: 1rem;
+    }
+    
+    #header-top i{
+        font-size: 15px;
+        color:rgba(76, 0, 0, 0.7);
+        float: right;
+        /* height: 40px;
+        line-height: 40px; */
+        margin-right: 0.3rem;
+        margin-top: 0.3rem;
+    }
+    #header-top span{
+        font-size: 12px;
+        float: right;
+        margin-right: 0.1rem;
+        margin-top: 0.3rem;
+        color:rgba(76, 0, 0, 0.7);
+    }
+    #header-center{
+        width:10rem;
+        height: 2rem;
+        /* border:1px solid #ccc; */
+         
+    }
+    #head-center-left{
+        float:left;
+    }
+    #head-center-left img{
+         width: 2rem;
+         height: 2rem;
+         margin-top: 0.7rem;
+         margin-left: 0.5rem;
+    }
+    #header-center-center{
+        float:right;
+        width:7rem;
+        height: 1.8rem;
+        /* border: solid; */
+    }
+    #username{
+        font-size:14px;
+        color:#fff;
+        float:left;
+        /* margin-left:-1rem;
+        margin-top: 0.5rem; */
+    }
+    #parper{
+        float:left;
+    }
+    #tong{
+        float:left;
+        margin-top: -3px;
+    }
+    #idcard{
+        font-size: 14px;
+        float: left;
+        color:rgba(255, 255, 255, 0.7);
+        margin-top: 3px;
+    }
+    .jingxiang{
+        width: 90px;
+        height: 16px;
+        line-height:14px;
+         margin-top: 50px;
+        border-radius: 10px;
+        font-size: 10px;
+       color: #fff;
+       background: #c8483f;
+       text-align: center;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+        
+    }
+    .xiaobai{
+        width: 90px;
+        height: 16px;
+        line-height:14px;
+        float: left;
+        margin-left:110px;
+        margin-top: -17px;
+        border-radius: 10px;
+        font-size: 10px;
+        color: #fff;
+        background: #c8483f;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #plus{
+        width: 100%;
+        height: 1rem;
+       
+    }
+    #plus1{
+        width: 8.93rem;
+        height: 0.98rem;
+        margin-left: 0.53rem;
+        border-radius:0 0 300px 300px / 0 0 18px 18px;
+        position: relative;
+    }
+    #plus2{
+        position: absolute;
+         left:0.8rem;
+         top:4.57rem;
+
+    }
+    #plus3{
+        position: absolute;
+         left:6.8rem;
+         top:4.5rem;
+    }
+    #payfor{
+        width: 100%;
+        height: 2rem;
+        border:0px solid #ccc;
+        margin-top: 0.266rem;
+    }
+    .payfor1{
+        width: 2.48rem;
+        height:2rem;
+        /* background: #ccc; */
+        float: left;
+        text-align: center;
+    }
+    .payfor1 img{
+          width: 0.533rem;
+          height: 0.533rem;
+
+    }
+    .payfor1 p{
+        font-size: 12px;
+        color:#666;
+    }
+    .kongbai{
+        width: 100%;
+        height: 0.4rem;
+        background: #F7F7F7;
+    }
+    #quan{
+        width: 100%;
+        height: 2rem;
+        /* border:1px solid #ccc; */
+    }
+    .quan1{
+        width:  2rem;
+        height: 2rem;
+        /* background: #ccc; */
+        float: left;
+        text-align: center;
+    }
+    .quan1 img{
+        position: absolute;
+        left:3.06rem;
+    }
+    .p1{
+        font-size: 13px;
+        line-height: 0.48rem;
+        height: 0.48rem;
+        margin-top: 0.426rem;
+        color: #e93b3d;
+        white-space: nowrap;
+    }
+    .p2{
+        font-size: 12px;
+        margin-top: 0.186px;
+        color:#666;
+    }
+    #chan{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top:15px;
+        left:27.5px;
+    }
+    .quan2{
+        width: 2rem;
+        height: 2rem;
+        /* background: #ccc; */
+        float: left;
+        text-align: center;
+        position: relative;
+    }
+    .p3{
+        margin-top: 40px;
+        font-size: 12px;
+        color:#666;
+    }
+    #collent{
+        width: 100%;
+        height: 2rem;
+        /* border:1px solid #ccc; */
+    }
+    .collent1{
+        width: 3.33rem;
+        height: 75px;
+        float: left;
+        text-align: center;
+    }
+    .p4{
+        font-size: 16px;
+        color:#333;
+        margin-top: 0.4rem;
+        font-weight: 700;
+    }
+    .p5{
+        font-size: 12px;
+        color:#666;
+        margin-top: 0.266rem;
+    }
+    .kongbai1{
+        width: 100%;
+        height: 0.8rem;
+        background: #F7F7F7;
+    }
+    .serve{
+        width: 100%;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        /* margin: 15px 0; */
+        /* border:1px solid #ccc; */
+    }
+    #span1{
+        font-size:14px;
+        margin-left:0.4rem;
+        color:#666;
+    }
+    #span2{
+        float: right;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-right: 10px;
+        color:#666;
+        font-weight: 600;
+    }
+    .appointment{
+        width: 100%;
+        height: 150px;
+    }
+    .appointment1{
+        width: 100%;
+        height: 75px;
+    }
+    .appointment1 div{
+        width:93px;
+        height: 75px;
+        float: left;
+        text-align: center;
+    }
+    .appointment1 p{
+        font-size: 12px;
+        color:#666;
+    }
+    .appointment2{
+        width: 100%;
+        height: 75px;
+        /* border:1px solid #ccc; */
+    }
+    .appointment2 div{
+        width:93px;
+        height: 75px;
+        float: left;
+        text-align: center;
+    }
+    .appointment2 p{
+        font-size: 12px;
+        color:#666;
+    }
+    .tuijian{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size:12px;
+        background: #F7F7F7;
+        color:#999;
+    }
+    .commodity{
+        width: 100%;
+        height: 6.4rem;
+    }
+    .commodity1{
+        width: 50%;
+        height: 6.4rem;
+        float: left;
+        border-bottom: 1px solid rgb(228, 228, 228);
+        border-right: 1px solid rgb(228, 228, 228);
+        position: relative;
+    }
+    .commodity1 img{
+        width: 4.66rem;
+        height:4.66rem;
+        margin-top: 10px;
+    }
+    /* .commodity1 span{
+       font-size: 12px;
+        text-align: center;
+    } */
+    .ziying{
+           width: 30px;
+           line-height: 15px;
+           background: #D84E4C;
+           border-radius: 4px;
+           font-size: 10px;
+           color:#fff;
+           position: absolute;
+           top:180px;
+           left:10px;
+           text-align: center;
+    }
+    .huawei{
+        font-size: 12px;
+        position: absolute;
+        top:177px;
+        left:45px;
+        color:#333;
+    }
+    .huawei1{
+        font-size: 12px;
+        position: absolute;
+        top:197px;
+        left:10px;
+        color:#333;
+    }
+    .huawei3{
+        font-size: 13px;
+        position: absolute;
+        top:220px;
+        left:10px;
+        color:#D84E4C;
+    }
+    .huawei4{
+        font-size: 16px;
+        position: absolute;
+        top:217px;
+        left:24px;
+        color:#D84E4C;
+    }
+    .huawei5{
+        width: 30px;
+        line-height: 15px;
+        text-align: center;
+        border: 1px solid #D84E4C;
+        font-size: 14px;
+        position: absolute;
+        top:220px;
+        left:70px;
+        color:#D84E4C;
+    }
+    
+    .commodity2{
+        width: 49%;
+        height: 240px;
+        text-align: center;
+        float: left;
+        border-bottom: 1px solid rgb(228, 228, 228);
+        position: relative;
+    }
+    .commodity2 img{
+        width: 4.66rem;
+        height: 4.66rem;
+        margin-top: 10px;
+    }
+    .suoni{
+        width: 100%;
+        height: 240px;
+    }
+    .suoni1{
+        width:50%;
+        height: 240px;
+        float: left;
+        border-bottom: 1px solid rgb(228, 228, 228);
+        border-right: 1px solid rgb(228, 228, 228);
+        position: relative;
+    }
+    .suoni1 img{
+        width: 175px;
+        height: 175px;
+        margin-top: 10px;
+    }
+    .suoni2{
+        width: 186px;
+        height: 240px;
+        float: left;
+        border-bottom: 1px solid rgb(228, 228, 228);
+        position: relative;
+    }
+    .suoni2img{
+        width: 175px;
+        height: 175px;
+        margin-top: 10px;
+    }
+    #bottom{
+        width:10rem;
+        height: 40px;
+        background: #fff;
+        border-top:1px solid #ccc;
+         position: fixed;
+         bottom: 0;
+         left:0;
+         right: 0;
+         
+    }
+    #bottom div{
+        width: 75px;
+        height: 40px;
+        float: left;
+        text-align: center;
+    }
+     .bottom1 img{
+         width: 60px;
+         height: 36px;
+     }
+     #copyright{
+         width: 100%;
+         line-height: 50px;
+         font-size: 12px;
+         text-align: center;
+         color:#999;
+     }
+     .scroll{
+        position: fixed;
+        display: none;
+        right: 0px;
+        bottom: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+   .scroll img{
+        width: 40px;
+        height: 40px;
+        background: #ccc;
+    }
+    #share1{
+         width: 120px;
+         height: 200px;
+         display:none;
+         background:#000;
+         opacity: 0.8;
+         border-radius: 10px;
+         top: 40px;
+         right:10px;
+         position: absolute;
+         /* z-index:10; */
+         text-align: center;
+    }
+    #share:hover div{
+        display:inline-block;
+        z-index: 1;
+    }
+    #share1 div{
+        width: 120px;
+        height: 40px;
+        float: left;
+        /* background: #e93b3d; */
+    }
+    #share1 div img{
+        width: 120px;
+        height: 40px;
+        border-radius:7px;
+    }
+     
+   
+    </style>
+</head>
+<body>
+   
+    <div id="box">
+          <!--顶部-->
+        <div id="top">
+            <div id="top-top">
+                <i class="fa fa-angle-left "></i>
+                <span>我的京东</span>
+                <!-- <i class="fa fa-ellipsis-h"></i> -->
+                <div id="share">
+                <img src="imagejd/shengluo.png" alt="" width="100%" class="shenglue">
+                <div id="share1" class="hiddenshenglue">
+                     <div>
+                          <img  width="100%" src="imagejd/firstpage.png"  alt="">
+                    </div>
+                     <div>
+                         <img  width="100%"  src="imagejd/search.png" alt="">
+                     </div>
+                     <div>
+                        <img  width="100%"  src="imagejd/shopcart1.png" alt="">
+                     </div>
+                     <div>
+                        <img  width="100%"  src="imagejd/my1.png" alt="">
+                     </div>
+                     <div>
+                        <img  width="100%"  src="imagejd/foot.png" alt="">
+                     </div>
+                     <!-- <img src="imagejd/shou.png" alt=""> -->
+                      
+                </div>
+               </div>
+            </div>
+        </div> 
+        <!--头部-->
+        <div id="header">
+            <div id="header-top">
+                <i class="fa fa-cog"></i>
+                <span>账号管理</span>  
+            </div>
+            <div id="header-center">
+                <div id="head-center-left">
+                    <img src="imagejd/user.png" alt="">
+                </div>
+                
+               <div id="header-center-center"> 
+                <span id="username">jd_150034zdmu</span>
+                <img  id="parper"   src="imagejd/write.png" alt="">
+                 <img id="tong"  src="imagejd/tong.png"  alt=""> 
+                 <span id="idcard">用户名:jd_5aace6cDada8</span>
+                 <div class="jingxiang">京享值6952</div>
+                 <div class="xiaobai">小白信用68.0 &gt; </div>
+               
+               </div>
+               <div id="plus">
+                    <img  id="plus1" src="https://img11.360buyimg.com/jdphoto/s710x134_jfs/t1/43463/14/4447/108469/5cd2c002Ee4dcb4c9/445d4efb8eee08e9.png" alt="">
+                    <img  id="plus2" src="imagejd/xiang.png" alt="">
+                    <img id="plus3" src="imagejd/chakan.png" alt="">
+                </div>
+           </div>
+        </div>
+
+        <!--中间-->
+        <div id="payfor">
+              <div class="payfor1">
+                  <img src="imagejd/zhifu.png" alt="">
+                  <p>代付款</p>
+              </div>
+              <div class="payfor1">
+                  <img src="imagejd/cart.png" alt="">
+                  <p>待收货</p>
+              </div>
+              <div class="payfor1">
+                  <img  src="imagejd/money.png"  alt="">
+                  <p>退换&nbsp;/&nbsp;售后</p>
+               </div>
+              <div class="payfor1">
+                  <img src="imagejd/all.png" alt="">
+                  <p>全部订单</p>
+              </div>
+        </div>
+        
+        <div class="kongbai"></div>
+        
+        <div id="quan">
+            <div class="quan1">
+                <p class="p1">2张</p>
+                <p class="p2">京东券</p>
+            </div>
+            <div class="quan1">
+                <img src="imagejd/jian.png" alt="">
+                    <p class="p1">开通有礼</p>
+                    <p class="p2">白条</p>
+            </div>
+            <div class="quan1">
+                    <p class="p1">753个</p>
+                    <p class="p2">京豆</p>
+            </div>
+            <div class="quan1">
+                    <p class="p1">0元</p>
+                    <p class="p2">红包</p>
+            </div>
+            <div class="quan2">
+                    <img id="chan" src="imagejd/chan.png" alt=""> 
+                    <p class="p3">我的资产</p>
+            </div>
+        </div>
+       
+        <div class="kongbai"></div>
+        
+        <div id="collent">
+            <div class="collent1">
+                <p class="p4">4</p>
+                <p class="p5">商品收藏</p>
+            </div>
+            <div class="collent1">
+                <p  class="p4">23</p>
+                <p  class="p5">店铺收藏</p>
+            </div>
+            <div class="collent1">
+                <p  class="p4">0</p>
+                <p  class="p5">我的足迹</p>
+            </div>
+        </div>
+       
+        <div class="kongbai"></div>
+        
+        <div class="appointment">
+               <div class="appointment1">
+                   <div>
+                       <img src="imagejd/yuyue.png" alt="">
+                       <p>我的预约</p>
+                   </div>
+                   <div>
+                       <img src="imagejd/chepiao.png" alt="">
+                       <p>京东火车票</p>
+                   </div>
+                   <div>
+                       <img src="imagejd/tuijian.png" alt="">
+                       <p>应用推荐</p>
+                   </div>
+                   <div>
+                        <img src="imagejd/yingye.png" alt="">
+                        <p> 京东通信营业厅</p>
+                   </div>
+               </div>
+               <div class="appointment2">
+                   <div>
+                        <img src="imagejd/fuli.png" alt="">
+                        <p>用户福利</p>
+                   </div>
+                   <div>
+                        <img src="imagejd/jipiao.png" alt="">
+                        <p>京东机票</p>
+                   </div>
+                   <div>
+                        <img src="imagejd/jiudian.png" alt="">
+                        <p> 京东酒店</p>
+                   </div>
+                    
+               </div>
+        </div>
+       
+        <div class="kongbai"></div>
+        
+        <div class="serve">
+            <span id="span1">客户服务</span>  <span id="span2"> <i class="fa fa-chevron-right"></i></span>
+        </div>
+        <div class="tuijian">————————&nbsp;为你推荐&nbsp;————————</div>
+        <div class="commodity">
+                <div class="commodity1">
+                    <img src="imagejd/huawei.png" alt="">
+                    <span class="ziying">自营</span>
+                     <span class="huawei">华为(HUAWEI)</span>
+                     <span class="huawei1">MateBook D(2018版)15.6...</span>
+                     <span class="huawei3">￥</span>
+                     <span class="huawei4">3988</span>
+                     <span class="huawei5">秒杀</span>
+                </div>
+                <div class="commodity2">
+                    <img src="imagejd/baobao.png" alt="">
+                    <span class="ziying">自营</span>
+                     <span class="huawei">CHARLES&KEI2019</span>
+                     <span class="huawei1">MateBook D(2018版)15.6...</span>
+                     <span class="huawei3">￥</span>
+                     <span class="huawei4">6988</span>
+                     <span class="huawei5">新品</span>
+                </div>
+        </div>
+        
+
+        <div class="suoni">
+                <div class="suoni1">
+                    <img src="imagejd/eye.png" alt="">
+                     <span class="ziying">自营</span>
+                     <span class="huawei">索尼(sony)WH-H900N</span>
+                     <span class="huawei1">MateBook D(2018版)15.6...</span>
+                     <span class="huawei3">￥</span>
+                     <span class="huawei4">388</span>
+                     <span class="huawei5">秒杀</span>
+                </div>
+                <div class="suoni2">
+                    <img src="imagejd/erji.png" alt="">
+                    <span class="ziying">预约</span>
+                     <span class="huawei"> 华为无线耳机</span>
+                     <span class="huawei1"> 真无线的蓝牙耳机(huawei)...</span>
+                     <span class="huawei3">￥</span>
+                     <span class="huawei4">388</span>
+                     <span class="huawei5">秒杀</span>
+                </div>
+        </div>
+        <div class="scroll">
+            <img src="imagejd/top.png" alt="">
+       </div>
+        <div id="copyright">
+              copyright  @2004--2019京东JD.com版权所有
+        </div>
+        
+       
+        <div id="bottom">
+               <div class="bottom1">
+                   <img src="imagejd/first.png" alt="">
+               </div>
+               <div class="bottom1 bottom2" >
+                   <img src="imagejd/fenlei.png" alt="">  
+               </div>
+               <div class="bottom1 bottom3">
+                   <img src="imagejd/shop.png" alt="">
+               </div>
+               <div class="bottom1 bottom4">
+                   <img src="imagejd/shopcart.png" alt="">
+               </div>
+               <div class="bottom1">
+                   <img src="imagejd/my.png" alt="">
+               </div>
+           </div>
+    
+    </div>
+    <script>
+    var bottom1=document.getElementsByClassName("bottom1")[0]
+    bottom1.onclick=function(){
+      location.href="index.html"
+  }
+  var bottom2=document.getElementsByClassName("bottom2")[0]
+    bottom2.onclick=function(){
+      location.href="list.html"
+  }
+  var bottom3=document.getElementsByClassName("bottom3")[0]
+    bottom3.onclick=function(){
+      location.href="activity.html"
+  }
+  var bottom4=document.getElementsByClassName("bottom4")[0]
+    bottom4.onclick=function(){
+      location.href="shoppingcar.html"
+  }
+
+
+    var fa=document.getElementsByClassName("fa")[0]
+  fa.onclick=function(){
+    history.go(-1)
+  }
+    var arrow= document.getElementsByClassName("scroll")[0];
+        window.onscroll=function(){
+        if(window.scrollY>360){
+           arrow.style.display="block"
+        }else{
+           arrow.style.display="none"
+        }
+       arrow.onclick = function(){
+       window.scrollTo(0, 0);
+       }
+    }
+    // var hiddennav=document.querySelector(".shenglue")
+    // var hiddenshenglue=document.querySelector(".hiddenshenglue")
+    // hiddennav.onclick=function(){
+    //     if(hiddenshenglue.style.display=="none"){
+    //         hiddenshenglue.style.display="block"
+    //     }else{
+    //         hiddenshenglue.style.display="none"
+    //     }
+       
+    // }
+    </script>
+</body>
+</html>

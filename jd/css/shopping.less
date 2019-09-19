@@ -18,15 +18,21 @@
     position: relative;
     a:nth-of-type(1){
         display: block;
-        top: 10px;
+        top: 0px;
         position: absolute;
         left: 10px;
+        line-height: 40px;
+	    color: gray;
+	    font-size: 20px;
+        font-family: '宋体';
+       
+        
     }
     a:nth-of-type(2){
         display: block;
         position: absolute;
         right:10px;
-        top: 10px;
+        top: 6px;
     }
     p{
         width: @width;
@@ -119,19 +125,22 @@
         }
     }
 }
+
 .scroll_l{
     width: 100%;
-    height: 100px;
+    // height: 100px;
     // background: salmon;
     overflow: auto;
     position: relative;
     .more{
         // position: fixed;
-         position: absolute;
-        top: 7px;
-        left: 0;
+       
         img{
-            width: 1%;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            // width: 0.5%;
+            width: 30px;
         }
     }
     div{
@@ -141,7 +150,9 @@
         // background: sandybrown;
         box-sizing: border-box;
         // position: absolute;
+        }
         ul{
+           
             width: 100%;
             li{
                
@@ -154,6 +165,80 @@
                     // display: block;
                     width: 100%;
                 }
+            }
+        }
+    }
+
+.mychannel{
+    width: 100%;
+   img{
+       width: 100%;
+   } 
+   position: relative;
+   
+}
+.channel_box{
+    // background: gold;
+    height: 250px;
+    width: 10rem;
+    position: absolute;
+    bottom: 5px;
+    // padding-left: 10px;
+    overflow: auto;
+    .channel_content{
+        width: 13.32rem;
+        height: 100%;
+        div{
+            height: 120px;
+            width: 3.3rem;
+            float: left; 
+            padding-left:0px; 
+            // background: darkgreen;
+            box-sizing: border-box;
+            padding-left: 12px;
+            padding-top:10px;
+            padding-right:0; 
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                // margin: 0 auto;
+
+            }
+        }
+    }
+}
+.bottom{
+    width: 100%;
+    height: 60px;
+    background:white;
+    position: fixed;
+    bottom: 0px;
+    ul{
+        width: 100%;
+        height: 100%;
+        li{
+            width: 2.5rem;
+            // background: forestgreen;
+            height: 100%;
+            float: left;
+            line-height: 60px;
+            a{
+                display: block;
+                width:50%;
+                margin: 0 auto;
+                // background: fuchsia;
+                overflow: hidden;
+                
+                img{
+                    display: block;
+                    width: 200%;
+                    margin-top: 5px;
+                   
+                   
+                    
+                }
+                
             }
         }
     }

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索框</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/sousuokuang.css">
+</head>
+<body>
+    <div class="s-box">
+        <div class="s-top">
+            <div class="s-top-top">
+                <i class="fa fa-angle-left"></i>
+                <input type="text" placeholder="魅族手机">
+                <div class="s-search">搜索</div>
+                <i class="fa fa-search " id="s-i-search"></i>
+            </div>
+        </div>
+        <div class="s-hot">
+            <span>热门搜索</span>
+            <span class="none">隐藏</span>
+            <span class="appear">显示</span>
+
+        </div>
+        <div class="s-bottom-box">
+            <div class="s-bottom">
+                <div class="s-bottom-word">空气净化器</div>
+                <div class="s-bottom-word">增压花洒喷头</div>
+                <div class="s-bottom-word">蓝牙音箱</div>
+            </div>
+            <div class="s-bottom">
+                <div class="s-bottom-word1">罗汉果茶</div>
+                <div class="s-bottom-word1">破壁机</div>
+                <div class="s-bottom-word1">笔记本声卡</div>
+                <div class="s-bottom-word1">加湿器</div>
+            </div>
+            <div class="s-bottom">
+                <div class="s-bottom-word1">拼装模型</div>
+                <div class="s-bottom-word1">移动路由器</div>
+                <div class="s-bottom-word1">办公室靠枕</div>
+            </div>
+            <div class="s-bottom">
+                <div class="s-bottom-word1">爱仕堡啤酒</div>
+                <div class="s-bottom-word1">北极星挂钟</div>
+            </div>
+        </div>
+        <div class="s-hide">
+            已隐藏搜索发现
+        </div>
+       
+    </div>
+
+    <script>
+        var hide = document.querySelector('.none')
+        var appear = document.querySelector('.appear')
+        var s_bottom_box = document.querySelector('.s-bottom-box')
+        var s_hide = document.querySelector('.s-hide')
+        console.log(s_bottom_box)
+        hide.onclick=function(){
+            this.style.display='none'
+            appear.style.display='inline-block'
+            s_bottom_box.style.display='none'
+            s_hide.style.display='block'
+        }
+        appear.onclick=function(){
+            this.style.display='none'
+            hide.style.display='inline-block'
+            s_bottom_box.style.display='block'
+            s_hide.style.display='none'
+        }
+        var fa=document.getElementsByClassName("fa")[0]
+    fa.onclick=function(){
+    //   location.href="index.html"
+      history.go(-1)
+  }
+    </script>
+</body>
+</html>

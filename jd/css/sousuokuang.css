@@ -1,0 +1,135 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background:#F6F6F6
+}
+.s-top{
+width:10rem;
+height: 1.3rem;
+background:#fff;
+border-bottom:#E5E5E5 1px solid
+}
+.s-top-top{
+    width: 9.3rem;
+    height: 1.3rem;
+    margin-left:0.3rem;
+    display:flex;
+    justify-content: space-between;
+    line-height:1.3rem;
+    align-items:center
+}
+.s-top-top i{
+    color:#74757F;
+    line-height:1.3rem;
+    font-size:0.8rem;
+    position:relative
+}
+.s-top-top input{
+    width:7rem;
+    height:0.9rem;
+    border-radius:0.5rem;
+    border:none;
+    background:#F7F7F7;
+    outline:none;
+    padding-left:1.3rem;
+    box-sizing:border-box
+}
+/* .s-top-top input::-webkit-input-placeholder{
+    padding-left:0.1rem
+} */
+.s-search{
+    width:1.3rem;
+    height:0.9rem;
+    background:#E93B3D;
+    border-radius:0.1rem;
+    color:#fff;
+    text-align:center;
+    font-size:0.45rem;
+    line-height:0.9rem;
+}
+#s-i-search{
+    position:absolute;
+    font-size:0.5rem;
+    color:#B7B7B7;
+    left:1.4rem
+}
+.s-hot{
+    width:9.4rem;
+    height:1rem;
+    margin-left:0.2rem;
+    margin-top:0.35rem;
+    /* background:#fff */
+}
+.s-hot span:first-of-type{
+    font-size:0.5rem;
+    text-align:center;
+    float:left;
+    color:#232326
+}
+.none,.appear{
+    font-size:0.5rem;
+    text-align:center;
+    float:right;
+    color:#999999
+}
+.appear{
+    display:none
+}
+.s-bottom{
+    width:10rem;
+    height:1.3rem;
+    padding-left: 10px;
+
+}
+.s-bottom-word{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    width:auto;
+    height:1rem;
+    background:#F0F2F5;
+    color:#E93B3D;
+    font-size:0.4rem;
+    border-radius:0.1rem;
+    padding:0.2rem;
+    margin-left:0.1rem;
+    position:relative;
+    top:-0.5rem
+}
+.s-bottom-word1{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    width:auto;
+    height:1rem;
+    background:#F0F2F5;
+    color:#686868;
+    font-size:0.4rem;
+    border-radius:0.1rem;
+    padding:0.2rem;
+    margin-left:0.1rem;
+    position:relative;
+    top:-0.5rem
+}
+.s-box{
+    width:10rem;
+    height:4rem;
+    background:#fff
+}
+.s-bottom-box{
+    width:10rem;
+    height:5.5rem;
+    background:#fff
+}
+.s-hide{
+    width:10rem;
+    height:4rem;
+    background:#fff;
+    font-size:0.4rem;
+    text-align:center;
+    line-height:4rem;
+    color:#999999;
+    display:none
+}

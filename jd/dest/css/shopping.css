@@ -8,15 +8,19 @@
 }
 .container_heard a:nth-of-type(1) {
   display: block;
-  top: 10px;
+  top: 0px;
   position: absolute;
   left: 10px;
+  line-height: 40px;
+  color: gray;
+  font-size: 20px;
+  font-family: '宋体';
 }
 .container_heard a:nth-of-type(2) {
   display: block;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 6px;
 }
 .container_heard p {
   width: 100%;
@@ -95,32 +99,90 @@
 }
 .scroll_l {
   width: 100%;
-  height: 100px;
   overflow: auto;
   position: relative;
 }
-.scroll_l .more {
-  position: absolute;
-  top: 7px;
-  left: 0;
-}
 .scroll_l .more img {
-  width: 1%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 30px;
 }
 .scroll_l div {
   width: 1000%;
   height: 100%;
   box-sizing: border-box;
 }
-.scroll_l div ul {
+.scroll_l ul {
   width: 100%;
 }
-.scroll_l div ul li {
+.scroll_l ul li {
   width: 80px;
   height: 80px;
   margin: 10px 0px 10px 10px;
   float: left;
 }
-.scroll_l div ul li img {
+.scroll_l ul li img {
   width: 100%;
+}
+.mychannel {
+  width: 100%;
+  position: relative;
+}
+.mychannel img {
+  width: 100%;
+}
+.channel_box {
+  height: 250px;
+  width: 10rem;
+  position: absolute;
+  bottom: 5px;
+  overflow: auto;
+}
+.channel_box .channel_content {
+  width: 13.32rem;
+  height: 100%;
+}
+.channel_box .channel_content div {
+  height: 120px;
+  width: 3.3rem;
+  float: left;
+  padding-left: 0px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-top: 10px;
+  padding-right: 0;
+}
+.channel_box .channel_content div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.bottom {
+  width: 100%;
+  height: 60px;
+  background: white;
+  position: fixed;
+  bottom: 0px;
+}
+.bottom ul {
+  width: 100%;
+  height: 100%;
+}
+.bottom ul li {
+  width: 2.5rem;
+  height: 100%;
+  float: left;
+  line-height: 60px;
+}
+.bottom ul li a {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bottom ul li a img {
+  display: block;
+  width: 200%;
+  margin-top: 5px;
 }

@@ -311,7 +311,7 @@
 }
 .jd_container .jd_foot{
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	background:white;
 	position: fixed;
 	bottom: 0;
@@ -321,17 +321,19 @@
 }
 .jd_container .jd_foot ul li{
 	width: 20%;
-	height: 70px;
+	height: 100px;
 	float: left;
 }
 .jd_container .jd_foot ul li a{
 	width: 100%;
 	display: block;
+	
 
 }
 .jd_container .jd_foot ul li a img{
-	width: 100%;
+	width: 80%;
 	display: block;
+	margin: 0 auto;
 	
 }
 .db{

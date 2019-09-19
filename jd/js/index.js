@@ -1,5 +1,12 @@
 // 加载完毕事件 在该事件中 写的js代码 去获取dom元素 就一定不会出现找不到的问题
 window.onload = function () {
+	var header_search=document.getElementsByClassName('header_search')[0]
+	// console.log(header_search)
+	header_search.onfocus=function(){
+		console.log(1)
+		location.href="search.html"
+		
+	}
 	// 顶部的通栏 滚动的效果
 	headerScroll();
 
