@@ -83,7 +83,7 @@ body{
 .main .main_left{
 	width: 90px;
 	height: 100%;
-	overflow: auto;
+	/* overflow: auto; */
 }
 .main .main_left ul{
 	width: 100%;

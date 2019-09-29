@@ -5,7 +5,7 @@
 	<!-- 添加视口属性 变为移动页面 -->
 	<!-- meta:vp -->
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>京东移动站</title>
+	<title>多快好省，购物上京东！</title>
 
 	<!-- 导入css -->
 	<link rel="stylesheet" type="text/css" href="css/base.css">
@@ -23,7 +23,7 @@
 			<a href="javascript:void(0)" class='header_logo'></a>
 			<span class='header_glass'></span>
 			<input type="search" class='header_search' placeholder='请输入内容'>
-			<a href="javascript:void(0)" class='header_login'>登录</a>
+			<a href="login1.html" class='header_login'>登录</a>
 		</div>
 
 		<!-- 顶部的 轮播图 -->
@@ -56,7 +56,7 @@
 		<!-- div.jd_nav>ul.clearfix>li*8>a[href='#']>img[src='images/nav$.png']+p{分类查询} -->
 		<div class="jd_nav">
 			<ul class="clearfix">
-				<li><a href="#">
+				<li><a href="firstpage.html">
 						<img src="images/nav0.png" alt="">
 						<p>京东超市</p>
 					</a></li>
@@ -180,10 +180,22 @@
 					<li><a href="list.html"><img src="images/foot2.png" alt=""></a></li>
 					<li><a href="activity.html"><img src="images/foot3.png" alt=""></a></li>
 					<li><a href="shoppingcar.html"><img src="images/foot4.png" alt=""></a></li>
-					<li><a href="person.html"><img src="images/foot5.png" alt=""></a></li>
+					<li><a href="person.html"><img src="images/foot5.png" alt="" class="person"></a></li>
 				</ul>
 		</div>
 		
 	</div>
+	<script>
+	var cookie=document.cookie
+	if(cookie==""){
+		var person=document.querySelector(".person")
+		person.parentElement.href="login1.html"
+	}else{
+		var person=document.querySelector(".person")
+		person.src="images/foot6.png"
+		
+		console.log(person)
+	}
+	</script>
 </body>
 </html>

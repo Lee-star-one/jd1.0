@@ -5,7 +5,7 @@ window.onload=function(){
    
     
     var startTransition = function () {
-		moveUl.style.transition = 'all .2s';
+		moveUl.style.transition = 'all 1s';
 	}
 
 	var endTransition = function () {
@@ -18,7 +18,7 @@ window.onload=function(){
 	}
 
     var index=1;
-    var width=20;
+    var width=40;
 	// 开启定时器
 	var timeId = setInterval(function () {
 		// 累加

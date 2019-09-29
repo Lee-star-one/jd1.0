@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var box=document.getElementsByTagName("html")[0]
+        box.style.fontSize=document.documentElement.clientWidth/10+"px"
+        console.log(document.documentElement.clientWidth)
+        console.log(document.documentElement.clientWidth)
+        console.log(box.style.fontSize)
+</script>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="dest/css/register.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body>
+    <div class="login_head">
+        <a><i class="fa fa-angle-left"></i></a>
+        <div>京东注册</div>
+    </div>
+    <div class="input">
+       
+        <div><input type="text" placeholder="请输入手机号" id="r-name">
+            <div><a>+86</a><a ></a></div>
+        </div>
+        <div><input type="password" placeholder="请输入密码" id="r-pwd">
+           
+        </div>
+        
+    </div>
+    <div class="btn">
+        <button id="register">注册</button>
+    </div>
+    <script>
+     var btn=document.getElementById("register")
+        var r_name=document.getElementById("r-name")
+        var r_pwd=document.getElementById("r-pwd")
+        r_name.onfocus=function(){
+            btn.innerHTML="立即注册"
+        }
+        btn.onclick=function(){
+          var str= document.cookie
+          var arr=str.split(";")
+            for(i=0;i<arr.length;i++){
+                arr[i]=arr[i].split("=")
+                arr[i][0]=arr[i][0].trim()
+                if(arr[i][0]==r_name.value){
+                   btn.innerHTML="<span style='color:red;font-size:20px'>用户名存在</span>"
+                   
+                    break;
+                }
+            //   }else{
+            //     document.cookie=r_name.value+"="+ r_pwd.value
+
+            //   }
+            }
+            if(arr.length==i){
+                document.cookie=r_name.value+"="+ r_pwd.value
+                btn.innerHTML="<span style='color:green;font-size:20px'>注册成功</span>"
+                
+            }
+
+
+            
+        }
+        var fa=document.getElementsByClassName("fa")[0]
+        fa.onclick=function(){
+        history.go(-1)
+        console.log(1)
+  }
+    
+    </script>
+</body>
+</html>

@@ -16,8 +16,17 @@
         <div class="s-top">
             <div class="s-top-top">
                 <i class="fa fa-angle-left"></i>
-                <input type="text" placeholder="魅族手机">
-                <div class="s-search">搜索</div>
+                <input type="text" placeholder="魅族手机" list="car">
+                <datalist id="car" style="width: 10px;">
+                        <option>衣服</option>
+                        <option>衣柜</option>
+                        <option>衣架</option>
+                        <option>宝郡</option>
+                        <option>宝鸽</option>
+                        <option>宝宝</option>
+                        <option>宝哈哈</option>
+                </datalist>
+                <div class="s-search" onclick="fn()">搜索</div>
                 <i class="fa fa-search " id="s-i-search"></i>
             </div>
         </div>
@@ -77,6 +86,9 @@
     fa.onclick=function(){
     //   location.href="index.html"
       history.go(-1)
+  }
+  function fn(){
+    location.href="shopping.html"
   }
     </script>
 </body>

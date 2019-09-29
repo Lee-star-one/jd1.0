@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    .y-top{
+            width:10rem;
+            height: 1.3rem;
+            border-bottom:1px solid rgb(253, 250, 250);
+            background: #fff;
+        }
+        .y-top-top{
+            width: 9.3rem;
+            height: 1.3rem;
+            margin-left:0.4rem;
+            display:flex;
+            justify-content: space-between;
+        }
+        .y-top-top i{
+            color:#74757F;
+            line-height:1.3rem;
+            font-size:30px
+        }
+        .y-top-top span{
+            font-size:14px;
+            line-height: 1.3rem;
+        }
+        .bigimage{
+         margin-top: 4.8rem;
+         width: 100%;
+         height: 7rem;
+         border:0px solid red;
+         margin:0 auto;
+         overflow: hidden;
+         position: relative;
+        }
+        .show{
+            width: 100%;
+            height: 7rem;
+            display:none;
+       }
+        .bigimage :first-child{
+            display:inline-block;
+        }
+        .clear{
+            float: right;
+            margin-right: 5rem;
+            margin-bottom: 0.2rem;
+        }
+        .clear li{
+            float: left;
+            background: #fff;
+            width:30px;
+            height: 10px;
+            color:#fff;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .clear:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        #prve{
+            width: 1.06rem;
+            height: 1.06rem;
+            background:rgb(39, 38, 38);
+            cursor: pointer;
+            position: absolute;
+            color:#fff;
+            left:0rem;
+            top:3.5rem;
+            border:none;
+            opacity:0.7;
+            border-radius: 50%;
+            outline: none;
+         }
+       #next{
+            width: 1.06rem;
+            height: 1.06rem;
+            background:rgb(39, 38, 38);
+            cursor: pointer;
+            position: absolute;
+            color:#fff;
+            right:0rem;
+            top:3.5rem;
+            border:none;
+            opacity:0.7;
+            border-radius: 50%;
+            outline: none;
+       }
+       input{
+            width: 8rem;
+            /* text-align: center; */
+            height: 0.8rem;
+            border-radius:14px;
+            border:#ccc 0px solid;
+            background: #fff;
+            outline:none;
+            /* position: absolute;
+            top:0.1rem;
+            left:1.2rem; */
+            z-index:999;
+        }
+        .search{
+            position: absolute;
+            top:0.1rem;
+            left:1.2rem;
+
+        }
+        .search i{
+             position: absolute;
+             top:0.7rem;
+             left:0.3rem;
+             font-size: 18px;
+             color:#999;
+             
+        }
+        #goods{
+            width: 100%;
+            height: 0.9rem;
+            border:0px solid #ccc;
+            position: relative;
+            margin-top: -0.3rem;
+            border-radius: 20px 20px 0 0;
+        }
+        #goods img{
+             width: 100%;
+             height: 0.7rem;
+             position: absolute;
+             /* margin-left: 10%; */
+             border-radius: 20px 20px 0 0;
+        }
+        #qianxi{
+            width:100%;
+            height: 1.2rem;
+        }
+      
+         #Kitchen{
+             width:100%;
+             height: 4rem;
+             margin-top: 2rem;
+        }
+        #Kitchen img{
+             margin: 0.1rem;
+        }
+        .Kitchen1{
+            width: 100%;
+            height: 2rem;
+            /* margin-top: 2rem; */
+        }
+        .Kitchen1 div{
+            width: 20%;
+            height: 2rem;
+            float: left;
+            text-align: center;
+        }
+       
+        .Kitchen1 div span{
+             font-size:14px;
+             
+        }
+        .kongbai{
+            width:100%;
+            height: 0.8rem;
+            background: #f6f6f6;
+        }
+        #sun{
+            width: 100%;
+            height: 1.5rem;
+            margin-top: 0.1rem;
+        }
+        #youhui{
+            width:100%;
+            height: 1.6rem;
+            /* position: relative; */
+        }
+        #youhui img{
+            margin-left: 0.3rem;
+            margin-top: 1.6rem;
+        }
+        /* .timer{
+            position: relative;
+        } */
+         .shijian{
+            width: 2.2rem;
+            height: 0.6rem;
+            line-height:0.6rem;
+            background: #f7f7f7;
+            border-radius: 0.30667rem;
+            font-size: 18px;
+            text-align: center;
+            color:#333;
+            border:none;
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            outline:none;
+        }
+        .shopping{
+            width: 100%;
+            height: 1rem;
+        }
+        .shopping1{
+            width: 100%;
+            height: 5rem;
+            display:none;
+        }
+        div.active{
+            display:block;
+        }
+        button.active{
+            background:  #FFA07E;
+        }
+        .shopping1 div{
+            width: 33%;
+            height: 5rem;
+            float: left;
+            margin-top: 1rem;
+            
+        }
+        .special{
+            width:100%;
+            height: 10rem;
+        }
+        .cost{
+            width:100%;
+            height: 1rem;
+            margin-left: 0.2rem;
+            float: left;
+            
+        }
+        .cost img{
+            height: 0.8rem;
+        }
+        .cost1{
+            width:4rem;
+            height: 8rem;
+            margin-left: 0.2rem;
+            margin-top: 0.2rem;
+            float: left;
+        }
+        .cost1 img{
+            width: 4rem;
+            height: 8rem;
+        }
+        .cost2{
+             width:5.8rem;
+             height: 4rem;
+             float: right;
+             /* background: #999; */
+             margin-top: 0.2rem;
+        }
+        .cost3{
+             width:5.8rem;
+             height: 4rem;
+             float: right;
+             /* background: #999; */
+        }
+        .cost2 div{
+            float: left;
+            width:2.9rem;
+            height: 4rem;
+            text-align: center;
+        }
+        .cost2 p{
+            margin-top: 0.2rem;
+            font-size: 15px;
+            color:#666;
+        }
+        .cost3 div{
+            float: left;
+            width:2.9rem;
+            height: 4rem;
+            text-align: center;
+        }
+        .cost3 p{
+            font-size: 14px;
+            color:#666;
+            margin-top: 0.2rem;
+        }
+        .recommend{
+            width:100%;
+            height: 12rem;
+            /* background: #666; */
+        }
+        .tuijian2{
+            width:30%;
+            height:5.2rem;
+            margin-left: 0.2rem;
+            float: left;
+        }
+        
+        .tuijian3{
+            width: 68%;
+            height: 5.2rem;
+            /* background: #ccc; */
+            float: right;
+        }
+        .tuijian3 div{
+            float: left;
+            width: 50%;
+            height: 5.2rem;
+            text-align: center;
+        }
+        .tuijian3 p{
+            font-size: 16px;
+        }
+        .tuijian3 span{
+            float: left;
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .tuijian5{
+            width:100%;
+            height: 8rem;
+        }
+        .tuijian5 div{
+            float: left;
+            width: 3.3rem;
+            height: 6rem;
+            /* background: #FFA07E; */
+            text-align: center;
+        }
+        .tuijian5 p{
+            font-size: 16px;
+        }
+        .tuijian5 span{
+            float: left;
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .free{
+            margin-bottom: 0.1rem;
+            float: right;
+        }
+        #bottom{
+        width:10rem;
+        height: 40px;
+        background: #fff;
+        border-top:1px solid #ccc;
+         position: fixed;
+         bottom: 0;
+         left:0;
+         right: 0;
+         
+    }
+    #bottom div{
+        width: 75px;
+        height: 40px;
+        float: left;
+        text-align: center;
+    }
+     .bottom1 img{
+         width: 60px;
+         height: 36px;
+     }
+     .scroll{
+        position: fixed;
+        display: none;
+        right: 0px;
+        bottom: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+   .scroll img{
+        width: 40px;
+        height: 40px;
+        background: #ccc;
+    }
+    </style>
+</head>
+<body>
+    <!--顶部-->
+    <div class="y-top">
+        <div class="y-top-top">
+            <i class="fa fa-angle-left"></i>
+            <span>京东超市</span>
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+    </div>
+  <!--轮播-->
+  <div class="bigimage">
+        <div class="wrap">
+        <img class="show"  src="image2/first.jpg"   alt="">
+        <img  class="show"  src="image2/second.jpg" alt="">
+        <img  class="show" src="image2/three.jpg" alt="">
+        <img class="show"  src="image2/four.jpg" alt="">
+        <img class="show" src="image2/five.jpg" alt="">
+    </div>   
+        <ul class="clear">
+            <li></li> 
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button id="prve"> <i class="fa fa-angle-left "></i></button>   
+        <button id="next"><i class="fa fa-angle-right "></i> </button>  
+       
+        <div class="search">
+            <input  placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奥克斯空调">
+            <i class="fa fa-search"></i>
+    </div> 
+    </div>
+  
+    
+    <div id="goods">
+        <img src="image2/six.png" alt="">
+    </div>
+    <div id="qianxi">
+        <img src="image2/qianxi.png" alt="">
+    </div>
+
+    <div id="Kitchen">
+          <img  src="image2/chuju.png"  alt="">
+    </div>
+     
+    <div class="kongbai"></div>
+    <div id="sun">
+        <img src="image2/sun.png" alt="">
+    </div>
+    <div id="youhui">
+        <img  src="image2/shop.png"  alt="">
+      
+    </div>
+    
+    <div class="shopping"> 
+            <button class="shijian active">8:00</button>
+            <button class="shijian">12：00</button>
+            <button class="shijian">16：00</button>
+    </div>
+    <!--8：00-->
+    <div class="shopping1 active" >
+            <div>
+                <img src="image2/lingshi1.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/mala.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/ala2.png" alt="">
+            </div>
+    </div>
+       <!--12：00-->
+       <div class="shopping1"  >
+            <div>
+                <img src="image2/songshu.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/songshu1.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/songshu3.png" alt="">
+            </div>
+    </div>
+     <!--16：00-->
+     <div class="shopping1" >
+            <div>
+                <img src="image2/diewan.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/huazhuang.png" alt="">
+            </div>
+            <div>
+                    <img src="image2/lingshi3.png" alt="">
+            </div>
+    </div>
+    
+      <!--优惠特卖-->
+      <div class="sell">
+           <img src="image2/temai.png" alt="">
+      </div>
+
+      <div class="special">
+          <div  class="cost"> <img  src="image2/fanzhi.png" alt=""> </div>
+          <div  class="cost1"> <img src="image2/fanzhi1.png" alt=""> </div>
+           <div class="cost2">
+               <div>
+                   <img src="image2/fanzhi2.png" alt="">
+                   <p>福临门新疆麦...</p>
+                   <p>￥59.9</p>
+               </div>
+               <div>
+                  <img src="image2/fanzhi3.png" alt="">
+                  <p>百草味   冰雪...</p>
+                  <p>￥59.9</p>
+               </div>
+           </div>
+           <div class="cost3">
+               <div>
+                   <img src="image2/fanzhi4.png" alt="">
+                   <p>花王   纸尿裤...</p>
+                   <p>￥119.9</p>
+               </div>
+               <div>
+                  <img src="image2/fanzhi5.png" alt="">
+                  <p>【京东JOY联...</p>
+                  <p>￥109.9</p>
+               </div>
+           </div>
+      </div>
+      
+      <div class="recommend">
+         <div class="tuijian1"><img src="image2/tuijian.png" alt=""></div> 
+         <div class="tuijian2"><img src="image2/tujian1.png" alt=""> </div>
+        
+         <div class="tuijian3">
+         <div class="tuijian4"><img src="image2/tuijian3.png"alt="">
+            <p>【京东JOY联今聚鲜原肉....</p>
+            <span>￥28.8</span>
+            <img   class="free" src="image2/shoppingcart.png" alt="">
+        </div>
+         <div class="tuijian6"><img src="image2/tuijian5.png"alt=""> 
+            <p>展卉 泰国进口龙眼精选一级果...</p>
+            <span>￥28.8</span>
+            <img  class="free" src="image2/shoppingcart.png" alt="">
+        </div>
+        </div>
+        
+      <div  class="tuijian5">
+           <div><img src="image2/tuijian6.png" alt="">
+            <p>帮宝适 超薄干爽拉拉裤...</p>
+            <span>￥48.8</span>
+            <img   class="free"  src="image2/shoppingcart.png" alt="">
+           </div>
+            <div><img src="image2/tuijian7.png" alt="">
+            <p>苏菲极薄0.1绵柔日用...</p>
+            <span>￥28.8</span>
+            <img   class="free"  src="image2/shoppingcart.png" alt="">
+            </div>
+             <div><img src="image2/tuijian5.png" alt="">
+            <p>苏菲极薄0.1绵柔日用...</p>
+            <span>￥28.8</span>
+            <img    class="free"  src="image2/shoppingcart.png" alt="">
+            </div>
+      </div>
+    </div>
+    <div class="scroll">
+        <img src="imagejd/top.png" alt="">
+   </div>
+     
+    <div id="bottom">
+        <div class="bottom1">
+            <img src="imagejd/first.png" alt="">
+        </div>
+        <div class="bottom1" >
+            <img src="imagejd/fenlei.png" alt="">  
+        </div>
+        <div class="bottom1">
+            <img src="imagejd/shop.png" alt="">
+        </div>
+        <div class="bottom1">
+            <img src="imagejd/shopcart.png" alt="">
+        </div>
+        <div class="bottom1">
+            <img src="imagejd/my.png" alt="">
+        </div>
+    </div>
+    <script>  
+      //轮播图 
+      var liElems=document.getElementsByTagName('li')
+      var div=document.getElementsByClassName('bigimage')[0]
+      var imgs=document.getElementsByClassName('show')
+      var prve=document.getElementById('prve')
+      var next=document.getElementById('next')
+      var num=0;
+      
+      for (var i=0;i<liElems.length;i++){
+          liElems[i].index=i
+          liElems[i].onclick=function(){
+          imgs[num].style.display='none'
+          liElems[num].style.background='#fff'
+          imgs[this.index].style.display='inline-block'
+          this.style.background='red'
+          num=this.index
+          }
+      }
+     var timer
+     function timerleave(){
+         timer=setInterval(function(){
+             nextImage()
+         },1000)
+     }
+       //鼠标移上去，图片暂停
+         div.onmouseover=function(){
+             clearInterval(timer)
+         }
+         div.onmouseleave=function(){
+             timerleave()
+         }
+         prve.onclick=function(){
+         imgs[num].style.display='none'
+        liElems[num].style.background='#fff'
+        num--
+        if(num<0){
+            num=imgs.length-1
+        }
+           imgs[num].style.display='inline-block'
+            liElems[num].style.background='red'
+        
+    }
+     function nextImage(){
+        imgs[num].style.display='none'
+        liElems[num].style.background='#fff'
+        num++
+        if(num>imgs.length-1){
+            num=0
+        }
+            imgs[num].style.display='inline-block'
+            liElems[num].style.background='red'
+        
+    }
+    next.onclick=function(){
+        nextImage()
+    }
+    
+
+
+
+    //选项卡
+    function Tab(btns,contents){
+            this.btns = btns
+            this.contents = contents
+            this.num = 0
+            var _this = this
+            for (var i=0;i<this.btns.length;i++){
+                (function(index){
+                    // 此时this指向为 window 
+                    // 所以需要提前存储this
+                    _this.btns[index].onclick = function(){
+                        // 此时的this 指向  点击的按钮
+                        _this.btns[_this.num].classList.remove('active')
+                        _this.contents[_this.num].classList.remove('active')
+                        _this.contents[index].classList.add('active')
+                        this.classList.add('active')
+                        _this.num = index
+                    }
+                })(i)
+            }
+        }
+
+
+
+        new Tab(document.querySelectorAll('.shijian'),document.querySelectorAll('.shopping1'))
+       
+
+       //置顶
+       var arrow= document.getElementsByClassName("scroll")[0];
+        window.onscroll=function(){
+        if(window.scrollY>360){
+           arrow.style.display="block"
+        }else{
+           arrow.style.display="none"
+        }
+       arrow.onclick = function(){
+       window.scrollTo(0, 0);
+       }
+    }
+    var fa=document.getElementsByClassName("fa")[0]
+  fa.onclick=function(){
+    history.go(-1)
+  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 80%;
+        height:300px;
+        border: 1px solid black;
+        margin: 60px auto; 
+        position: relative;
+        overflow: hidden;
+    }
+   
+  
+    .content1{
+        width: 100%;
+        height: 180px;
+        background:url(images/9212.png);
+        background-size: cover;
+    }
+    .content2{
+        width: 100%;
+        height:60px;
+        /* background: goldenrod; */
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+    .content3{
+        width: 100%;
+        height:60px;
+        background:url(images/9211.png);
+        background-size: cover;
+    }
+    .content1 a{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .main{
+        width: 99%;
+        /* border: 1px solid  black; */
+        height: 30px;
+        border-radius: 15px;
+        background: #DFE1E2;
+        position: relative;
+        
+
+    }
+    .dian{
+        width: 40px;
+        height: 40px;
+        background: white;
+        position: absolute;
+        top: -5px;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid  #999;
+    }
+    .time{
+        display: block;
+        margin: 0 auto;
+        color: green;
+        width: 60px;
+        /* line-height: 40px; */
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content1">
+            <a class="kuai"><img src="images/9213.png" alt="" width="100%"></a>
+        </div>
+        <div class="content2">
+            <div class="main">
+                <div class="dian">|||</div>
+                <span class="time"></span>
+            </div>
+        </div>
+        <div class="content3"> 
+        </div>
+    </div>
+    <script>
+        var w=document.getElementsByClassName("main")[0]
+        var b=document.getElementsByClassName("box")[0]
+      
+        
+     var startX=0
+    var moveX=0
+    var distanceX=0
+    var one=document.getElementsByClassName("dian")[0]
+    var kuai=document.getElementsByClassName("kuai")[0]
+    var starttime=0
+    var endtime=0
+    one.addEventListener("touchstart",function(event){
+        startX=event.touches[0].clientX
+       starttime=Date.now();
+       
+    })
+    one.addEventListener("touchmove",function(){
+        moveX=event.touches[0].clientX-startX
+    
+        
+        // one.style.transtion=""
+        // one.style.transtion="all .5s"
+        // distanceX=moveX
+        
+      if((distanceX+moveX)<w.offsetWidth-40&&moveX>0){
+        one.style.transform='translateX('+(distanceX+moveX)+'px)'
+        kuai.style.transform='translateX('+(distanceX+moveX)+'px)'
+      }
+      console.log(moveX)
+    //    console.log((distanceX+moveX))
+    })
+    
+    one.addEventListener("touchend",function(){
+        endtime=Date.now()-starttime
+        var times=document.getElementsByClassName("time")[0]
+        times.innerHTML=endtime/1000+"秒"
+        
+        // one.style.transtion="all .5s"
+        // one.style.transform="translateX("+distanceX+"px)"
+        distanceX+=moveX
+       
+        if(moveX>201){
+            setTimeout(function(){
+                location.href="index.html"
+            },1000)
+               
+           
+            
+
+        }else{
+            one.style.transform=''
+            kuai.style.transform=''
+            distanceX=0
+        }
+      
+    })
+    </script>
+</body>
+</html>

@@ -45,6 +45,7 @@
 	border-radius: 15px;
 	/* 内容挤到右边 */
 	padding-left: 25px;
+	outline: none;
 }
 .jd_header .header_login{
 	position: absolute;
@@ -327,13 +328,17 @@
 .jd_container .jd_foot ul li a{
 	width: 100%;
 	display: block;
+	height: 100%;
 	
 
 }
 .jd_container .jd_foot ul li a img{
-	width: 80%;
+	width: 70%;
 	display: block;
 	margin: 0 auto;
+	line-height: 40px;
+	
+	
 	
 }
 .db{

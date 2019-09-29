@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dingdan.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+</head>
+<body>
+    <div class="head">
+        确认订单
+        <div class="h_l"> <i class="fa fa-angle-left "></i></div>
+    </div>
+    <div class="dizhi">
+        <p>李星星 130****3220</p>
+        <p>北京朝阳区三环以内SOHO北京公官</p>
+    </div>
+    <div><img src="image/9221.png" alt="" width="100%"></div>
+    <div class="box">
+    <!-- <div class="shangping">
+        <div class="top">
+            <span><img src="9222.png" alt=""></span>
+            <a>京东自营</a>
+        </div>
+        <div class="content">
+            <img src="9223.jpg" alt="">
+            <div><span>京东家电</span><strong>奥克斯 (AUX) 1.5匹 一级能效 变频冷暖 小京鱼APP 明月侠壁挂式空调</strong></div>
+            <div>不记重量</div>
+            <p><span>￥</span><span>2899</span><span>X1</span></p>
+        </div>
+        
+    </div>
+    <div class="shangping">
+            <div class="top">
+                <span><img src="9222.png" alt=""></span>
+                <a>京东自营</a>
+            </div>
+            <div class="content">
+                <img src="9223.jpg" alt="">
+                <div><span>京东家电</span><strong>奥克斯 (AUX) 1.5匹 一级能效 变频冷暖 小京鱼APP 明月侠壁挂式空调</strong></div>
+                <div>不记重量</div>
+                <p><span>￥</span><span>2899</span><span>X1</span></p>
+            </div>
+            
+        </div> -->
+    </div>
+    <div class="kuaidi">
+        <p><span>配送服务</span><span>京东快递</span></p>
+        <p><span>大件送货时间</span><span>09-24 周二</span></p>
+        <p><span>大件安装时间</span><span>09-24 周三</span></p>
+    </div>
+    <div class="kuaidi1">
+        <p><span>发票信息</span><span>电子发票 个人 商品明细</span></p>
+        <p><span>礼品卡</span><span>无可用</span></p>
+    </div>
+    <div class="kuaidi1">
+            <p><span>商品金额</span><span class="jiner">￥5298</span></p>
+            <p><span>运费</span><span>+￥0.00</span></p>
+    </div>
+    <div class="zongjia"><span>实付金额：￥</span><span class="totle">5298</span></div>
+    <div class="zhifu"><button>在线支付</button></div>
+    <script>
+       
+
+    var data=[];
+    if(sessionStorage.getItem("0")){
+        data.push(JSON.parse(sessionStorage.getItem("0")))
+    }
+    if(sessionStorage.getItem("1")){
+        data.push(JSON.parse(sessionStorage.getItem("1")))
+    }
+    if(sessionStorage.getItem("2")){
+        data.push(JSON.parse(sessionStorage.getItem("2")))
+    }
+    // data.push(JSON.parse(sessionStorage.getItem("0")))
+    // data.push(JSON.parse(sessionStorage.getItem("1")))
+    // data.push(JSON.parse(sessionStorage.getItem("2")))
+
+    console.log(data)
+    
+    var box=document.querySelector(".box")
+    for(var i=0;i<data.length;i++){
+        var div=document.createElement("div")
+        div.className="shangping"
+
+        div.innerHTML=`
+            <div class="top">
+                <span><img src="image/9222.png" alt=""></span>
+                <a>京东自营</a>
+            </div>
+            <div class="content">
+                <img src=${data[i].img} alt="">
+                <div><span>京东家电</span><strong>${data[i].title}</strong></div>
+                <div>不记重量</div>
+                <p><span>￥</span><span class="danjia">${data[i].num}</span><span>X1</span></p>
+            </div>
+            
+        </div>`
+        box.appendChild(div)
+    }
+
+        var totle=document.getElementsByClassName("totle")[0]
+        var danjia=document.getElementsByClassName("danjia")
+        var jiner=document.getElementsByClassName("jiner")[0]
+        
+        console.log(totle)
+        console.log(danjia)
+        var sum=0
+        for(var i=0;i<danjia.length;i++){
+            console.log(danjia[i].innerHTML)
+            sum+=danjia[i].innerHTML-0
+        }
+        totle.innerHTML=sum;
+        jiner.innerHTML="￥"+sum;
+    
+        var fa=document.getElementsByClassName("fa")[0]
+  fa.onclick=function(){
+    //   location.href="index.html"
+    history.go(-1)
+  }
+    </script>
+</body>
+</html>
